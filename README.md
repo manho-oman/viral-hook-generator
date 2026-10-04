@@ -1,6 +1,14 @@
 ﻿# 🎬 Viral YouTube Hook Generator
 
-A minimalist web app that generates three attention-grabbing YouTube script hooks based on your video topic.
+A minimalist web app that generates attention-grabbing YouTube script hooks based on your video topic.
+
+**🎥 [Watch Demo Video](https://youtu.be/umCmJ0u86mA)**
+
+**🏆 Built for Kiro University Challenge - #KiroUniversity #BuildWithKiro**
+
+## 📺 Demo
+
+**[▶️ Watch the full demo and feature walkthrough](https://youtu.be/umCmJ0u86mA)**
 
 ## ✨ Features
 
