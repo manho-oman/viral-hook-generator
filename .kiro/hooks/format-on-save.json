@@ -1,0 +1,14 @@
+﻿{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Format on Save",
+      "trigger": "PostFileSave",
+      "matcher": "\\.(js|html|css|json|md)$",
+      "action": {
+        "type": "command",
+        "command": "npx prettier --write ."
+      }
+    }
+  ]
+}

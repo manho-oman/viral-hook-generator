@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viral Hook Generator Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .slide-in { animation: slideIn 0.4s ease-out; }
+    .history-item { transition: all 0.3s; }
+    .history-item:hover { transform: scale(1.02); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 min-h-screen transition-all duration-500">
+  <div class="container mx-auto px-4 py-6 max-w-7xl">
+    <header class="text-center mb-6">
+      <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 mb-2">Viral Hook Generator Pro</h1>
+      <p class="text-lg text-gray-600 mb-4">AI-Powered Hook Analytics & Niche-Specific Templates</p>
+      <div class="flex justify-center gap-2 mb-4">
+        <button class="theme-btn px-3 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-sm font-semibold" data-theme="light">Light</button>
+        <button class="theme-btn px-3 py-1 rounded-lg bg-gray-800 hover:bg-gray-900 text-white text-sm font-semibold" data-theme="dark">Dark</button>
+        <button class="theme-btn px-3 py-1 rounded-lg bg-cyan-100 hover:bg-cyan-200 text-sm font-semibold" data-theme="ocean">Ocean</button>
+        <button class="theme-btn px-3 py-1 rounded-lg bg-orange-100 hover:bg-orange-200 text-sm font-semibold" data-theme="sunset">Sunset</button>
+      </div>
+    </header>
+    <div class="grid lg:grid-cols-3 gap-6 mb-8">
+      <div class="lg:col-span-2">
+        <div class="theme-card bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <h2 class="text-xl font-bold mb-4 flex items-center"><span class="mr-2">✨</span> Generate New Hooks</h2>
+          <div class="mb-4">
+            <label class="block text-sm font-semibold mb-2">Select Your Niche:</label>
+            <div class="flex flex-wrap gap-2">
+              <button class="niche-btn px-4 py-2 rounded-lg bg-purple-100 hover:bg-purple-200 text-sm font-semibold ring-2 ring-purple-600" data-niche="gaming">🎮 Gaming</button>
+              <button class="niche-btn px-4 py-2 rounded-lg bg-blue-100 hover:bg-blue-200 text-sm font-semibold" data-niche="business">💼 Business</button>
+              <button class="niche-btn px-4 py-2 rounded-lg bg-green-100 hover:bg-green-200 text-sm font-semibold" data-niche="fitness">💪 Fitness</button>
+              <button class="niche-btn px-4 py-2 rounded-lg bg-orange-100 hover:bg-orange-200 text-sm font-semibold" data-niche="tech">💻 Tech</button>
+              <button class="niche-btn px-4 py-2 rounded-lg bg-pink-100 hover:bg-pink-200 text-sm font-semibold" data-niche="lifestyle">🌟 Lifestyle</button>
+              <button class="niche-btn px-4 py-2 rounded-lg bg-yellow-100 hover:bg-yellow-200 text-sm font-semibold" data-niche="education">📚 Education</button>
+            </div>
+          </div>
+          <input type="text" id="topic-input" placeholder="Enter your video topic..." class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-4 focus:ring-blue-300 focus:border-blue-500 mb-4 text-lg">
+          <div class="flex gap-3">
+            <button id="generate-btn" class="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition hover:scale-105">Generate 6 Scored Hooks</button>
+            <button id="export-btn" class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-lg transition">Export</button>
+          </div>
+        </div>
+        <div id="hooks-container" class="grid gap-4"></div>
+      </div>
+      <div class="lg:col-span-1">
+        <div class="theme-card bg-white rounded-2xl shadow-xl p-6 sticky top-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold flex items-center"><span class="mr-2">📜</span> History</h2>
+            <button id="clear-history" class="text-sm text-red-600 hover:text-red-800 font-semibold">Clear</button>
+          </div>
+          <div id="history-container" class="space-y-2 max-h-96 overflow-y-auto"></div>
+          <div id="empty-history" class="text-center text-gray-400 py-8 hidden">No history yet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

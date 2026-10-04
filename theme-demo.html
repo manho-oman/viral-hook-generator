@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-brand">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Theme Demo - Design System</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Demo-specific styles */
+    .color-swatch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: 2px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .color-swatch:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="min-h-screen p-8">
+  <div class="max-w-6xl mx-auto space-y-12">
+    <!-- Header with Theme Toggle -->
+    <header class="flex items-center justify-between">
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Brand Theme Demo</h1>
+        <p class="text-lg" style="color: var(--muted-foreground)">
+          A modern, professional design system with deep blue primary colors
+        </p>
+      </div>
+      <button 
+        id="theme-toggle"
+        class="px-4 py-2 rounded-lg font-medium transition-colors"
+        style="background: var(--primary); color: var(--primary-foreground);"
+        onmouseover="this.style.opacity='0.9'"
+        onmouseout="this.style.opacity='1'"
+      >
+        Toggle Dark Mode
+      </button>
+    </header>
+
+    <!-- Color Palette -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Color Palette</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="color-swatch" style="background: var(--primary); color: var(--primary-foreground);">
+          Primary
+        </div>
+        <div class="color-swatch" style="background: var(--secondary); color: var(--secondary-foreground);">
+          Secondary
+        </div>
+        <div class="color-swatch" style="background: var(--accent); color: var(--accent-foreground);">
+          Accent
+        </div>
+        <div class="color-swatch" style="background: var(--destructive); color: var(--destructive-foreground);">
+          Destructive
+        </div>
+      </div>
+    </section>
+
+    <!-- Chart Colors -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Chart Colors</h2>
+      <div class="grid grid-cols-5 gap-4">
+        <div class="color-swatch" style="background: var(--chart-1); color: white;">1</div>
+        <div class="color-swatch" style="background: var(--chart-2); color: white;">2</div>
+        <div class="color-swatch" style="background: var(--chart-3); color: white;">3</div>
+        <div class="color-swatch" style="background: var(--chart-4); color: white;">4</div>
+        <div class="color-swatch" style="background: var(--chart-5); color: white;">5</div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Buttons</h2>
+      <div class="flex flex-wrap gap-4">
+        <button class="px-6 py-3 rounded-lg font-semibold transition-opacity hover:opacity-90" 
+                style="background: var(--primary); color: var(--primary-foreground);">
+          Primary Button
+        </button>
+        <button class="px-6 py-3 rounded-lg font-semibold transition-opacity hover:opacity-90" 
+                style="background: var(--secondary); color: var(--secondary-foreground);">
+          Secondary Button
+        </button>
+        <button class="px-6 py-3 rounded-lg font-semibold transition-opacity hover:opacity-90" 
+                style="background: var(--accent); color: var(--accent-foreground);">
+          Accent Button
+        </button>
+        <button class="px-6 py-3 rounded-lg font-semibold transition-opacity hover:opacity-90" 
+                style="background: var(--destructive); color: var(--destructive-foreground);">
+          Destructive Button
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Cards</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-lg" style="background: var(--card); border: 1px solid var(--border);">
+          <h3 class="text-xl font-bold mb-2">Card Title</h3>
+          <p style="color: var(--muted-foreground);">
+            This is a card with the brand theme's card background and border colors.
+          </p>
+        </div>
+        <div class="p-6 rounded-lg" style="background: var(--card); border: 1px solid var(--border);">
+          <h3 class="text-xl font-bold mb-2">Another Card</h3>
+          <p style="color: var(--muted-foreground);">
+            Cards automatically adapt to light and dark modes.
+          </p>
+        </div>
+        <div class="p-6 rounded-lg" style="background: var(--card); border: 1px solid var(--border);">
+          <h3 class="text-xl font-bold mb-2">Third Card</h3>
+          <p style="color: var(--muted-foreground);">
+            Notice the consistent styling across all cards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Elements -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Form Elements</h2>
+      <div class="max-w-md space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-2">Input Field</label>
+          <input 
+            type="text" 
+            placeholder="Enter text here..."
+            class="w-full px-4 py-2 rounded-lg"
+            style="background: var(--background); border: 2px solid var(--input); color: var(--foreground);"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Textarea</label>
+          <textarea 
+            placeholder="Enter text here..."
+            rows="4"
+            class="w-full px-4 py-2 rounded-lg"
+            style="background: var(--background); border: 2px solid var(--input); color: var(--foreground);"
+          ></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Typography</h2>
+      <div class="space-y-4">
+        <h1 class="text-4xl font-bold">Heading 1</h1>
+        <h2 class="text-3xl font-bold">Heading 2</h2>
+        <h3 class="text-2xl font-bold">Heading 3</h3>
+        <p class="text-lg">
+          This is regular body text. The brand theme uses a subtle blue tint throughout 
+          for brand cohesion while maintaining excellent readability.
+        </p>
+        <p style="color: var(--muted-foreground);">
+          This is muted text, perfect for secondary information and descriptions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Alert Examples -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Alerts</h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded-lg" style="background: var(--primary); color: var(--primary-foreground);">
+          <strong>Info:</strong> This is an informational alert using the primary color.
+        </div>
+        <div class="p-4 rounded-lg" style="background: var(--accent); color: var(--accent-foreground);">
+          <strong>Warning:</strong> This is a warning alert using the accent color.
+        </div>
+        <div class="p-4 rounded-lg" style="background: var(--destructive); color: var(--destructive-foreground);">
+          <strong>Error:</strong> This is an error alert using the destructive color.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Theme toggle functionality
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+    
+    toggleBtn.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      toggleBtn.textContent = html.classList.contains('dark') 
+        ? 'Toggle Light Mode' 
+        : 'Toggle Dark Mode';
+    });
+  </script>
+</body>
+</html>
